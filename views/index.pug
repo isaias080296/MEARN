@@ -1,0 +1,73 @@
+extends layout
+ 
+block content
+ 
+  nav.navbar.navbar-expand-md.navbar-dark.bg-dark.mb-4
+    a.navbar-brand(href='#') First Call Resolutions
+    button.navbar-toggler(type='button' data-toggle='collapse' data-target='#navbarCollapse' aria-controls='navbarCollapse' aria-expanded='false' aria-label='Toggle navigation')
+      span.navbar-toggler-icon
+    #navbarCollapse.collapse.navbar-collapse
+      ul.navbar-nav.mr-auto
+        li.nav-item.active
+          a.nav-link(href='/')
+            | Call Agent
+            span.sr-only (current)
+        li.nav-item
+          a.nav-link(href='contactos') Reporting
+        li.nav-item 
+          img.imag(src='./public/images/Logo.png' class="img-thumbnail")
+      form.form-inline.mt-2.mt-md-0
+  main.container(role='main')
+    
+     
+    
+    .row
+      .col-sm-4 
+        h2 Call
+        p
+            <iframe src="https://tcsi2i.awsapps.com/connect/ccp-v2/softphone" allow="microphone; autoplay" width="250" height="450"></iframe>
+            img.image(src='./public/images/Logo.png' class="img-thumbnail")
+            - var img = "public/imges/Logo.png"
+              img(src=img)
+              img.image(src='public/imges/Logo.png' + img_path_var )
+            img(src=assets+"public/images/Logo.png" alt="logo")/
+        p
+        
+      .col-md-3
+        h2 Date Information
+           form.form-inline.mt-2.mt-md-0
+            p
+             input.form-control.mr-sm-2(type='text' placeholder='Call ID' aria-label='Call ID')
+            p
+            p
+             input.form-control.mr-sm-2(type='text' placeholder='Short Descripcion' aria-label='Descripcion')
+            p
+
+            p
+             input.form-control.mr-sm-2(type='text' placeholder='Resolution' aria-label='Resolution')
+            p
+
+               P
+                   a.btn.btn-secondary(href='#' role='button') Accept &raquo;
+
+               P
+      .col-sm-1
+      .col-md-4
+        h2 Resolve Information
+        table(style='width:100%', border='1')
+             tr  
+                 th Call ID 
+                 th Short Description
+                 th Ticket 
+             tr 
+                 td 001
+                 td Adam 
+                 td 25
+        
+          
+    hr
+ 
+  footer
+  .container
+    div(align='center')
+      a( target='_blank') Desarrollado por i2i TCS
